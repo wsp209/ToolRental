@@ -30,7 +30,7 @@ public class RentalDetails {
         setRentalDetails(inputToolCode, inputCheckoutDate, inputRentalDays, discount);
     }
             
-    private RentalDetails setRentalDetails (String inputToolCode, String inputCheckoutDate, int inputRentalDays, int discount) throws ParseException, Exception {
+    private void setRentalDetails (String inputToolCode, String inputCheckoutDate, int inputRentalDays, int discount) throws ParseException, Exception {
         //Set tool code
         rentedTool = new Tool(inputToolCode);  
         //Set rental days
@@ -97,7 +97,6 @@ public class RentalDetails {
         outputDiscountAmount = "$"+decimalFormat.format(discountAmount);
         outputChargeAfterDiscount = "$"+decimalFormat.format(chargeAfterDiscount);
         
-        return this;
     }
         
     
